@@ -33,7 +33,7 @@ A página vai além do desafio original, aplicando boas práticas modernas de de
 
 ## 🌐 Demonstração
 
-🔗 **Acesse online:** [https://SEU-USUARIO.github.io/bolo-de-cenoura/](https://SEU-USUARIO.github.io/bolo-de-cenoura/)
+🔗 **Acesse online:** [https://jaog1v1.github.io/Site-O-Melhor-Bolo-de-Cenoura/)
 
 > ⚠️ Substitua `SEU-USUARIO` pelo seu nome de usuário do GitHub depois de publicar.
 
