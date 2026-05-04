@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A melhor receita de Bolo de Cenoura com Cobertura de Chocolate, por João Gabriel. Fofinho, saboroso e perfeito para o café da tarde.">
+    <meta name="author" content="João Gabriel">
+    <meta name="theme-color" content="#E76F51">
+    <title>O Melhor Bolo de Cenoura | Por João Gabriel</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Pacifico&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Tela de carregamento -->
+    <div id="preloader" class="preloader" aria-hidden="true">
+        <div class="preloader-conteudo">
+            <div class="preloader-bolo">🍰</div>
+            <p>Preparando a receita...</p>
+        </div>
+    </div>
+
+    <!-- Container de confetes -->
+    <div id="confetes" class="confetes" aria-hidden="true"></div>
+
+    <!-- Barra de progresso de leitura -->
+    <div id="barra-progresso" class="barra-progresso" aria-hidden="true"></div>
+
+    <!-- Barra de navegação -->
+    <nav class="nav-principal" aria-label="Navegação principal">
+        <div class="nav-conteudo">
+            <a href="#topo" class="nav-logo">🥕 Bolo de Cenoura</a>
+            <ul class="nav-lista">
+                <li><a href="#ingredientes">Ingredientes</a></li>
+                <li><a href="#preparo">Preparo</a></li>
+                <li><a href="#galeria">Galeria</a></li>
+                <li><a href="#dicas">Dicas</a></li>
+                <li><a href="#depoimentos">Avaliações</a></li>
+                <li><a href="#autor">Autor</a></li>
+            </ul>
+            <button id="botao-tema" class="botao-tema" type="button" aria-label="Alternar tema claro/escuro">
+                <span class="icone-tema">🌙</span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Cabeçalho com hero -->
+    <header class="cabecalho" id="topo">
+        <div class="cabecalho-decoracao" aria-hidden="true">
+            <span class="bolha bolha-1"></span>
+            <span class="bolha bolha-2"></span>
+            <span class="bolha bolha-3"></span>
+            <span class="emoji-flutuante emoji-1">🥕</span>
+            <span class="emoji-flutuante emoji-2">🍫</span>
+            <span class="emoji-flutuante emoji-3">🥚</span>
+            <span class="emoji-flutuante emoji-4">🍰</span>
+            <span class="emoji-flutuante emoji-5">🌾</span>
+        </div>
+        <div class="cabecalho-conteudo">
+            <span class="cabecalho-tag">🍰 Receita tradicional brasileira</span>
+            <h1>O Melhor Bolo de Cenoura</h1>
+            <p class="subtitulo-cabecalho">Com cobertura cremosa de chocolate</p>
+            <p class="cabecalho-autor">por <strong>João Gabriel</strong></p>
+            <div class="cabecalho-avaliacao" role="img" aria-label="Avaliação 5 de 5 estrelas">
+                <span class="estrelas">★★★★★</span>
+                <span class="avaliacao-texto">4.9 · 2.847 avaliações</span>
+            </div>
+            <div class="cabecalho-botoes">
+                <a href="#ingredientes" class="cabecalho-cta">Ver receita ↓</a>
+                <button id="botao-compartilhar-hero" class="cabecalho-cta cabecalho-cta-secundario" type="button">
+                    Compartilhar 🔗
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="conteudo-principal">
+
+        <!-- Apresentação -->
+        <section class="apresentacao animar-ao-rolar">
+            <figure class="figura-bolo">
+                <img src="imagens/bolo-principal.jpg"
+                     alt="Fatia de bolo de cenoura fofinho com generosa cobertura de chocolate por cima, servido em um prato branco"
+                     loading="lazy"
+                     onerror="this.onerror=null; this.src='https://upload.wikimedia.org/wikipedia/commons/4/40/Bolo_de_cenoura_com_cobertura_de_chocolate_vegano.jpg';">
+                <figcaption>Receita tradicional brasileira — fofinho por dentro, irresistível por fora.</figcaption>
+            </figure>
+            <p class="introducao">
+                Esta é aquela receita clássica que toda família brasileira adora: um bolo de cenoura
+                <strong>fofinho, dourado e levíssimo</strong>, coberto com uma calda brilhante de chocolate
+                que endurece levemente por cima. Perfeito para o lanche da tarde, acompanhado de um cafezinho
+                quentinho. A massa fica com aquela cor alaranjada vibrante que só o liquidificador consegue.
+            </p>
+        </section>
+
+        <!-- Cards de informações rápidas -->
+        <section class="informacoes-rapidas animar-ao-rolar" aria-label="Informações rápidas da receita">
+            <div class="info-card">
+                <span class="info-icone" aria-hidden="true">⏱️</span>
+                <span class="info-numero">15 min</span>
+                <span class="info-rotulo">Preparo</span>
+            </div>
+            <div class="info-card">
+                <span class="info-icone" aria-hidden="true">🔥</span>
+                <span class="info-numero">40 min</span>
+                <span class="info-rotulo">Forno</span>
+            </div>
+            <div class="info-card">
+                <span class="info-icone" aria-hidden="true">🍽️</span>
+                <span class="info-numero" id="numero-porcoes">10</span>
+                <span class="info-rotulo">Porções</span>
+            </div>
+            <div class="info-card">
+                <span class="info-icone" aria-hidden="true">⭐</span>
+                <span class="info-numero">Fácil</span>
+                <span class="info-rotulo">Dificuldade</span>
+            </div>
+        </section>
+
+        <!-- Medidor de dificuldade -->
+        <section class="medidor-dificuldade animar-ao-rolar">
+            <h2>Nível de dificuldade</h2>
+            <div class="grid-dificuldade">
+                <div class="dificuldade-item">
+                    <div class="dificuldade-info">
+                        <span>👨‍🍳 Habilidade necessária</span>
+                        <span class="dificuldade-nivel">Iniciante</span>
+                    </div>
+                    <div class="dificuldade-barra">
+                        <div class="dificuldade-preenchimento" style="--largura: 25%"></div>
+                    </div>
+                </div>
+                <div class="dificuldade-item">
+                    <div class="dificuldade-info">
+                        <span>⏰ Tempo total</span>
+                        <span class="dificuldade-nivel">Rápido</span>
+                    </div>
+                    <div class="dificuldade-barra">
+                        <div class="dificuldade-preenchimento" style="--largura: 35%"></div>
+                    </div>
+                </div>
+                <div class="dificuldade-item">
+                    <div class="dificuldade-info">
+                        <span>💰 Custo estimado</span>
+                        <span class="dificuldade-nivel">Baixo</span>
+                    </div>
+                    <div class="dificuldade-barra">
+                        <div class="dificuldade-preenchimento" style="--largura: 30%"></div>
+                    </div>
+                </div>
+                <div class="dificuldade-item">
+                    <div class="dificuldade-info">
+                        <span>🛒 Ingredientes acessíveis</span>
+                        <span class="dificuldade-nivel">Muito fácil</span>
+                    </div>
+                    <div class="dificuldade-barra">
+                        <div class="dificuldade-preenchimento" style="--largura: 95%"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- História da receita -->
+        <section class="historia animar-ao-rolar">
+            <h2>Um pedacinho de história</h2>
+            <div class="historia-conteudo">
+                <p>
+                    O bolo de cenoura à brasileira é único no mundo. Diferente da versão americana ou inglesa
+                    — geralmente densa, com especiarias e cream cheese — o nosso é <strong>fofinho, alaranjado
+                    e bate de frente com uma cobertura de brigadeiro mole</strong>.
+                </p>
+                <p>
+                    A receita ganhou popularidade nas casas brasileiras nos anos <strong>1960</strong>, com
+                    a chegada do liquidificador, que tornou possível bater a cenoura crua direto na massa,
+                    dando aquela cor vibrante que reconhecemos de longe.
+                </p>
+            </div>
+        </section>
+
+        <!-- Galeria de fotos -->
+        <section class="galeria animar-ao-rolar" id="galeria">
+            <h2>Galeria de fotos</h2>
+            <p class="secao-descricao">Clique em uma foto para ampliar</p>
+            <div class="grid-galeria">
+                <figure class="galeria-item" data-imagem="imagens/bolo-1.jpg">
+                    <img src="imagens/bolo-1.jpg" alt="Bolo de cenoura com cobertura de chocolate e granulado" loading="lazy"
+                         onerror="this.onerror=null; this.src='https://upload.wikimedia.org/wikipedia/commons/c/c5/Bolo_de_cenoura_com_chocolate_e_granulado.jpg';">
+                    <figcaption>Com chocolate e granulado</figcaption>
+                </figure>
+                <figure class="galeria-item" data-imagem="imagens/bolo-2.jpg">
+                    <img src="imagens/bolo-2.jpg" alt="Bolo de cenoura tradicional brasileiro" loading="lazy"
+                         onerror="this.onerror=null; this.src='https://upload.wikimedia.org/wikipedia/commons/c/cc/Bolo_de_cenoura.jpg';">
+                    <figcaption>Receita tradicional</figcaption>
+                </figure>
+                <figure class="galeria-item" data-imagem="imagens/bolo-3.jpg">
+                    <img src="imagens/bolo-3.jpg" alt="Bolo de cenoura visto de cima" loading="lazy"
+                         onerror="this.onerror=null; this.src='https://upload.wikimedia.org/wikipedia/commons/4/42/Bolo_de_Cenoura_%28cima%29%2C_08-12-2020.jpg';">
+                    <figcaption>Vista de cima</figcaption>
+                </figure>
+                <figure class="galeria-item" data-imagem="imagens/bolo-4.jpg">
+                    <img src="imagens/bolo-4.jpg" alt="Bolo de cenoura em ângulo diagonal" loading="lazy"
+                         onerror="this.onerror=null; this.src='https://upload.wikimedia.org/wikipedia/commons/5/5c/Bolo_de_Cenoura_%28diagonal%29%2C_08-12-2020.jpg';">
+                    <figcaption>Vista diagonal</figcaption>
+                </figure>
+                <figure class="galeria-item" data-imagem="imagens/bolo-5.jpg">
+                    <img src="imagens/bolo-5.jpg" alt="Bolo de cenoura visto de lado" loading="lazy"
+                         onerror="this.onerror=null; this.src='https://upload.wikimedia.org/wikipedia/commons/6/69/Bolo_de_cenoura_%28lateral%29%2C_08-12-2020.jpg';">
+                    <figcaption>Vista lateral</figcaption>
+                </figure>
+                <figure class="galeria-item" data-imagem="imagens/bolo-6.jpg">
+                    <img src="imagens/bolo-6.jpg" alt="Pedaço fatiado de bolo de cenoura" loading="lazy"
+                         onerror="this.onerror=null; this.src='https://upload.wikimedia.org/wikipedia/commons/c/ca/Peda%C3%A7o_de_Bolo_de_Cenoura%2C_08-12-2020.jpg';">
+                    <figcaption>Um pedaço suculento</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <!-- Calculadora de porções -->
+        <section class="calculadora-porcoes animar-ao-rolar" aria-label="Ajustar porções">
+            <h2>Quantas porções você quer fazer?</h2>
+            <p class="calculadora-descricao">Ajuste o número de porções e as quantidades dos ingredientes serão recalculadas automaticamente.</p>
+            <div class="controle-porcoes">
+                <button id="porcoes-menos" class="botao-porcoes" type="button" aria-label="Diminuir porções">−</button>
+                <span id="porcoes-valor" class="porcoes-valor">10</span>
+                <button id="porcoes-mais" class="botao-porcoes" type="button" aria-label="Aumentar porções">+</button>
+                <span class="porcoes-rotulo">porções</span>
+            </div>
+        </section>
+
+        <!-- Ingredientes -->
+        <section class="ingredientes animar-ao-rolar" id="ingredientes">
+            <h2>Ingredientes</h2>
+            <p class="secao-descricao">Marque o que você já tem em casa ✓</p>
+
+            <div class="grupo-ingredientes">
+                <h3>🍰 Para o bolo</h3>
+                <ul>
+                    <li><label><input type="checkbox"> <span class="quantidade" data-base="3" data-unidade="cenouras médias">3 cenouras médias</span> (cerca de 250g), descascadas e picadas</label></li>
+                    <li><label><input type="checkbox"> <span class="quantidade" data-base="4" data-unidade="ovos">4 ovos</span></label></li>
+                    <li><label><input type="checkbox"> <span class="quantidade" data-base="1" data-unidade="xícara">1 xícara</span> (240ml) de óleo vegetal</label></li>
+                    <li><label><input type="checkbox"> <span class="quantidade" data-base="2" data-unidade="xícaras">2 xícaras</span> (240g) de açúcar</label></li>
+                    <li><label><input type="checkbox"> <span class="quantidade" data-base="2.5" data-unidade="xícaras">2 e 1/2 xícaras</span> (300g) de farinha de trigo</label></li>
+                    <li><label><input type="checkbox"> <span class="quantidade" data-base="1" data-unidade="colher de sopa">1 colher de sopa</span> de fermento em pó</label></li>
+                    <li><label><input type="checkbox"> 1 pitada de sal</label></li>
+                </ul>
+            </div>
+
+            <div class="grupo-ingredientes">
+                <h3>🍫 Para a cobertura de chocolate</h3>
+                <ul>
+                    <li><label><input type="checkbox"> <span class="quantidade" data-base="1" data-unidade="xícara">1 xícara</span> (200g) de açúcar</label></li>
+                    <li><label><input type="checkbox"> <span class="quantidade" data-base="4" data-unidade="colheres de sopa">4 colheres de sopa</span> de chocolate em pó (ou cacau)</label></li>
+                    <li><label><input type="checkbox"> <span class="quantidade" data-base="3" data-unidade="colheres de sopa">3 colheres de sopa</span> de manteiga</label></li>
+                    <li><label><input type="checkbox"> <span class="quantidade" data-base="0.5" data-unidade="xícara">1/2 xícara</span> (120ml) de leite</label></li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Substituições -->
+        <section class="substituicoes animar-ao-rolar">
+            <h2>Substituições inteligentes</h2>
+            <p class="secao-descricao">Faltou um ingrediente? Sem pânico — aqui vão alternativas que funcionam.</p>
+            <ul class="lista-substituicoes">
+                <li>
+                    <span class="sub-original">Óleo vegetal</span>
+                    <span class="sub-seta">→</span>
+                    <span class="sub-novo">Óleo de coco ou manteiga derretida</span>
+                </li>
+                <li>
+                    <span class="sub-original">Açúcar refinado</span>
+                    <span class="sub-seta">→</span>
+                    <span class="sub-novo">Açúcar mascavo ou demerara</span>
+                </li>
+                <li>
+                    <span class="sub-original">Farinha de trigo</span>
+                    <span class="sub-seta">→</span>
+                    <span class="sub-novo">Farinha integral (use 80% da quantidade)</span>
+                </li>
+                <li>
+                    <span class="sub-original">Leite de vaca</span>
+                    <span class="sub-seta">→</span>
+                    <span class="sub-novo">Leite vegetal (aveia, amêndoas, coco)</span>
+                </li>
+                <li>
+                    <span class="sub-original">Chocolate em pó</span>
+                    <span class="sub-seta">→</span>
+                    <span class="sub-novo">Cacau 100% (mais intenso e menos doce)</span>
+                </li>
+            </ul>
+        </section>
+
+        <!-- Equipamentos -->
+        <section class="equipamentos animar-ao-rolar">
+            <h2>Equipamentos necessários</h2>
+            <ul class="lista-equipamentos">
+                <li><span class="equipamento-icone">🌀</span><span>Liquidificador</span></li>
+                <li><span class="equipamento-icone">🥣</span><span>Tigela grande</span></li>
+                <li><span class="equipamento-icone">🍲</span><span>Panela pequena</span></li>
+                <li><span class="equipamento-icone">🎂</span><span>Forma de bolo</span></li>
+                <li><span class="equipamento-icone">🥄</span><span>Colher / espátula</span></li>
+                <li><span class="equipamento-icone">📏</span><span>Xícaras medidoras</span></li>
+            </ul>
+        </section>
+
+        <!-- Modo de Preparo -->
+        <section class="modo-preparo animar-ao-rolar" id="preparo">
+            <h2>Modo de Preparo</h2>
+            <p class="secao-descricao">
+                Acompanhe seu progresso marcando cada passo. <span id="progresso-passos" class="progresso-tag">0 de 10 passos</span>
+            </p>
+
+            <h3>🍰 Bolo</h3>
+            <ol class="lista-passos">
+                <li>
+                    <input type="checkbox" class="check-passo" aria-label="Marcar passo concluído">
+                    <strong>Pré-aqueça o forno</strong> a 180 °C e unte uma forma com manteiga e farinha.
+                </li>
+                <li>
+                    <input type="checkbox" class="check-passo" aria-label="Marcar passo concluído">
+                    <strong>Bata os líquidos:</strong> no liquidificador, bata as cenouras, os ovos e o óleo até obter uma mistura homogênea e alaranjada.
+                </li>
+                <li>
+                    <input type="checkbox" class="check-passo" aria-label="Marcar passo concluído">
+                    <strong>Misture os secos:</strong> em uma tigela grande, misture a farinha, o açúcar e o sal.
+                </li>
+                <li>
+                    <input type="checkbox" class="check-passo" aria-label="Marcar passo concluído">
+                    <strong>Una as misturas:</strong> despeje a mistura do liquidificador sobre os secos e mexa delicadamente com um fouet.
+                </li>
+                <li>
+                    <input type="checkbox" class="check-passo" aria-label="Marcar passo concluído">
+                    <strong>Adicione o fermento:</strong> por último, acrescente o fermento e incorpore com uma espátula, sem bater demais.
+                </li>
+                <li>
+                    <input type="checkbox" class="check-passo" aria-label="Marcar passo concluído">
+                    <strong>Asse:</strong> transfira a massa para a forma e leve ao forno por aproximadamente 40 minutos, ou até que um palito saia limpo.
+                </li>
+            </ol>
+
+            <h3>🍫 Cobertura</h3>
+            <ol class="lista-passos">
+                <li>
+                    <input type="checkbox" class="check-passo" aria-label="Marcar passo concluído">
+                    Em uma panela pequena, junte o açúcar, o chocolate em pó, a manteiga e o leite.
+                </li>
+                <li>
+                    <input type="checkbox" class="check-passo" aria-label="Marcar passo concluído">
+                    Leve ao fogo médio, mexendo sempre, até começar a borbulhar.
+                </li>
+                <li>
+                    <input type="checkbox" class="check-passo" aria-label="Marcar passo concluído">
+                    Deixe ferver por 2 a 3 minutos, sem parar de mexer, até engrossar levemente.
+                </li>
+                <li>
+                    <input type="checkbox" class="check-passo" aria-label="Marcar passo concluído">
+                    Despeje ainda quente sobre o bolo morno e espalhe com cuidado.
+                </li>
+            </ol>
+        </section>
+
+        <!-- Cronômetro -->
+        <section class="cronometro-secao animar-ao-rolar">
+            <h2>Cronômetro do forno</h2>
+            <p class="secao-descricao">Coloque o bolo no forno e dispare o cronômetro de 40 minutos.</p>
+            <div class="cronometro">
+                <div class="cronometro-display">
+                    <span id="cronometro-minutos">40</span>
+                    <span class="cronometro-separador">:</span>
+                    <span id="cronometro-segundos">00</span>
+                </div>
+                <div class="cronometro-botoes">
+                    <button id="crono-iniciar" class="botao-crono" type="button">▶ Iniciar</button>
+                    <button id="crono-pausar" class="botao-crono" type="button">⏸ Pausar</button>
+                    <button id="crono-resetar" class="botao-crono" type="button">↻ Resetar</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tabela nutricional -->
+        <section class="nutricao animar-ao-rolar">
+            <h2>Informação nutricional</h2>
+            <p class="secao-descricao">Por porção (1 fatia média)</p>
+            <div class="tabela-nutricao">
+                <div class="nutricao-item">
+                    <div class="nutricao-info">
+                        <span class="nutricao-nome">Calorias</span>
+                        <span class="nutricao-valor">320 kcal</span>
+                    </div>
+                    <div class="nutricao-barra"><div class="nutricao-preenchimento" style="--largura: 65%"></div></div>
+                </div>
+                <div class="nutricao-item">
+                    <div class="nutricao-info">
+                        <span class="nutricao-nome">Carboidratos</span>
+                        <span class="nutricao-valor">48 g</span>
+                    </div>
+                    <div class="nutricao-barra"><div class="nutricao-preenchimento" style="--largura: 75%"></div></div>
+                </div>
+                <div class="nutricao-item">
+                    <div class="nutricao-info">
+                        <span class="nutricao-nome">Proteínas</span>
+                        <span class="nutricao-valor">5 g</span>
+                    </div>
+                    <div class="nutricao-barra"><div class="nutricao-preenchimento" style="--largura: 25%"></div></div>
+                </div>
+                <div class="nutricao-item">
+                    <div class="nutricao-info">
+                        <span class="nutricao-nome">Gorduras</span>
+                        <span class="nutricao-valor">12 g</span>
+                    </div>
+                    <div class="nutricao-barra"><div class="nutricao-preenchimento" style="--largura: 40%"></div></div>
+                </div>
+                <div class="nutricao-item">
+                    <div class="nutricao-info">
+                        <span class="nutricao-nome">Fibras</span>
+                        <span class="nutricao-valor">2 g</span>
+                    </div>
+                    <div class="nutricao-barra"><div class="nutricao-preenchimento" style="--largura: 15%"></div></div>
+                </div>
+            </div>
+            <p class="nutricao-aviso">* Valores aproximados, podem variar conforme os ingredientes utilizados.</p>
+        </section>
+
+        <!-- Dicas -->
+        <section class="dicas animar-ao-rolar" id="dicas">
+            <h2>Dicas de ouro</h2>
+            <div class="grid-dicas">
+                <article class="dica-card">
+                    <div class="dica-icone">🥕</div>
+                    <h3>Escolha boas cenouras</h3>
+                    <p>Prefira cenouras firmes, com cor laranja vibrante. Elas garantem cor e sabor ao bolo.</p>
+                </article>
+                <article class="dica-card">
+                    <div class="dica-icone">🌡️</div>
+                    <h3>Forno pré-aquecido</h3>
+                    <p>Nunca coloque o bolo no forno frio. Pré-aquecer garante que cresça uniformemente.</p>
+                </article>
+                <article class="dica-card">
+                    <div class="dica-icone">🥄</div>
+                    <h3>Não bata demais</h3>
+                    <p>Após colocar o fermento, misture com cuidado. Bater muito faz o bolo solar.</p>
+                </article>
+                <article class="dica-card">
+                    <div class="dica-icone">🍫</div>
+                    <h3>Calda na medida</h3>
+                    <p>Para cobertura mais brilhante, retire do fogo assim que cobrir as costas da colher.</p>
+                </article>
+                <article class="dica-card">
+                    <div class="dica-icone">⏳</div>
+                    <h3>Espere amornar</h3>
+                    <p>Despeje a calda no bolo morno (não quente). Ela penetra melhor e fica irresistível.</p>
+                </article>
+                <article class="dica-card">
+                    <div class="dica-icone">🪡</div>
+                    <h3>Teste do palito</h3>
+                    <p>Espete um palito no centro. Se sair limpo, está pronto. Se sair com massa, espere mais.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Variações -->
+        <section class="variacoes animar-ao-rolar" id="variacoes">
+            <h2>Variações da receita</h2>
+            <div class="grid-variacoes">
+                <article class="variacao-card">
+                    <span class="variacao-emoji">🥥</span>
+                    <h3>Com coco</h3>
+                    <p>Adicione 1/2 xícara de coco ralado à massa para um toque tropical.</p>
+                </article>
+                <article class="variacao-card">
+                    <span class="variacao-emoji">🌰</span>
+                    <h3>Com nozes</h3>
+                    <p>Inclua 1/2 xícara de nozes picadas. Crocância e sabor a cada mordida.</p>
+                </article>
+                <article class="variacao-card">
+                    <span class="variacao-emoji">🥛</span>
+                    <h3>Versão fit</h3>
+                    <p>Substitua açúcar por adoçante culinário e use farinha integral.</p>
+                </article>
+                <article class="variacao-card">
+                    <span class="variacao-emoji">🍊</span>
+                    <h3>Com laranja</h3>
+                    <p>Acrescente raspas de uma laranja para um aroma cítrico delicioso.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Conservação -->
+        <section class="conservacao animar-ao-rolar">
+            <h2>Como conservar</h2>
+            <div class="grid-conservacao">
+                <div class="conservacao-item">
+                    <span class="conservacao-icone">🏠</span>
+                    <h3>Temperatura ambiente</h3>
+                    <p>Em recipiente fechado, dura até <strong>3 dias</strong>.</p>
+                </div>
+                <div class="conservacao-item">
+                    <span class="conservacao-icone">❄️</span>
+                    <h3>Geladeira</h3>
+                    <p>Coberto com filme plástico, dura até <strong>7 dias</strong>.</p>
+                </div>
+                <div class="conservacao-item">
+                    <span class="conservacao-icone">🧊</span>
+                    <h3>Congelador</h3>
+                    <p>Em fatias e bem embalado, dura até <strong>3 meses</strong>.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Harmonização -->
+        <section class="harmonizacao animar-ao-rolar">
+            <h2>Combina com</h2>
+            <ul class="lista-harmonizacao">
+                <li>
+                    <span class="harm-emoji">☕</span>
+                    <strong>Café preto</strong>
+                    <span>O clássico imbatível para o lanche da tarde.</span>
+                </li>
+                <li>
+                    <span class="harm-emoji">🥛</span>
+                    <strong>Leite gelado</strong>
+                    <span>Perfeito para a criançada (e os adultos também).</span>
+                </li>
+                <li>
+                    <span class="harm-emoji">🍵</span>
+                    <strong>Chá de canela</strong>
+                    <span>Combinação aconchegante para dias frios.</span>
+                </li>
+            </ul>
+        </section>
+
+        <!-- FAQ -->
+        <section class="faq animar-ao-rolar" id="faq">
+            <h2>Perguntas frequentes</h2>
+            <details class="faq-item">
+                <summary>Posso usar cenoura ralada em vez de bater no liquidificador?</summary>
+                <p>Pode, mas o bolo perde aquela cor alaranjada vibrante e fica menos fofinho. Se for fazer assim, rale bem fininha.</p>
+            </details>
+            <details class="faq-item">
+                <summary>Por que meu bolo solou (afundou no meio)?</summary>
+                <p>Geralmente isso acontece por três motivos: forno aberto antes da hora, fermento de má qualidade, ou massa batida demais depois de adicionar o fermento.</p>
+            </details>
+            <details class="faq-item">
+                <summary>Posso fazer sem ovos?</summary>
+                <p>Sim. Substitua cada ovo por 1 colher de sopa de linhaça misturada com 3 colheres de água, deixando hidratar por 10 minutos.</p>
+            </details>
+            <details class="faq-item">
+                <summary>Qual o tamanho ideal da forma?</summary>
+                <p>Uma forma redonda de 23cm ou retangular de 20x30cm funcionam perfeitamente. Se a forma for muito pequena, a massa transborda; se muito grande, o bolo fica baixinho.</p>
+            </details>
+            <details class="faq-item">
+                <summary>A cobertura precisa endurecer?</summary>
+                <p>Não totalmente — ela cria uma casquinha leve por cima e fica cremosa por dentro. Se quiser mais firme, ferva por mais 1 minuto.</p>
+            </details>
+            <details class="faq-item">
+                <summary>Posso congelar o bolo já com a cobertura?</summary>
+                <p>Pode, mas o ideal é congelar sem cobertura e fazer ela fresca na hora de servir. A textura fica melhor.</p>
+            </details>
+        </section>
+
+        <!-- Avaliação interativa -->
+        <section class="avaliacao-interativa animar-ao-rolar">
+            <h2>Avalie esta receita</h2>
+            <p class="secao-descricao">O que você achou? Dê sua nota clicando nas estrelas.</p>
+            <div class="estrelas-avaliacao" role="radiogroup" aria-label="Avaliação por estrelas">
+                <button class="estrela" data-valor="1" type="button" aria-label="1 estrela">★</button>
+                <button class="estrela" data-valor="2" type="button" aria-label="2 estrelas">★</button>
+                <button class="estrela" data-valor="3" type="button" aria-label="3 estrelas">★</button>
+                <button class="estrela" data-valor="4" type="button" aria-label="4 estrelas">★</button>
+                <button class="estrela" data-valor="5" type="button" aria-label="5 estrelas">★</button>
+            </div>
+            <p id="mensagem-avaliacao" class="mensagem-avaliacao"></p>
+        </section>
+
+        <!-- Depoimentos -->
+        <section class="depoimentos animar-ao-rolar" id="depoimentos">
+            <h2>O que estão dizendo</h2>
+            <p class="secao-descricao">Mais de 2.847 pessoas já fizeram esta receita ✨</p>
+            <div class="grid-depoimentos">
+                <article class="depoimento-card">
+                    <div class="depoimento-cabecalho">
+                        <div class="depoimento-avatar" style="background: #E76F51;">MS</div>
+                        <div>
+                            <strong>Maria Silva</strong>
+                            <div class="depoimento-estrelas">★★★★★</div>
+                        </div>
+                    </div>
+                    <p>"Receita perfeita! Fiz para o aniversário do meu filho e foi um sucesso. O bolo ficou super fofinho e a cobertura ficou no ponto certo. Recomendo demais!"</p>
+                    <span class="depoimento-data">há 2 dias</span>
+                </article>
+                <article class="depoimento-card">
+                    <div class="depoimento-cabecalho">
+                        <div class="depoimento-avatar" style="background: #5C3A21;">CO</div>
+                        <div>
+                            <strong>Carlos Oliveira</strong>
+                            <div class="depoimento-estrelas">★★★★★</div>
+                        </div>
+                    </div>
+                    <p>"Sou péssimo na cozinha mas as instruções são tão claras que deu super certo. A calculadora de porções ajudou demais — fiz uma versão menor!"</p>
+                    <span class="depoimento-data">há 1 semana</span>
+                </article>
+                <article class="depoimento-card">
+                    <div class="depoimento-cabecalho">
+                        <div class="depoimento-avatar" style="background: #D4A574;">AR</div>
+                        <div>
+                            <strong>Ana Rodrigues</strong>
+                            <div class="depoimento-estrelas">★★★★★</div>
+                        </div>
+                    </div>
+                    <p>"O cronômetro foi a melhor parte! Nunca mais esqueci o bolo no forno. A receita é exatamente igual à da minha avó. Saudades batendo forte!"</p>
+                    <span class="depoimento-data">há 2 semanas</span>
+                </article>
+                <article class="depoimento-card">
+                    <div class="depoimento-cabecalho">
+                        <div class="depoimento-avatar" style="background: #F4A261;">PL</div>
+                        <div>
+                            <strong>Paulo Lima</strong>
+                            <div class="depoimento-estrelas">★★★★☆</div>
+                        </div>
+                    </div>
+                    <p>"Fiz a versão com nozes que está nas variações e ficou maravilhoso. Dei uma estrela a menos só porque comi quase tudo sozinho 😅"</p>
+                    <span class="depoimento-data">há 3 semanas</span>
+                </article>
+            </div>
+        </section>
+
+        <!-- Newsletter -->
+        <section class="newsletter animar-ao-rolar">
+            <div class="newsletter-conteudo">
+                <span class="newsletter-icone">📧</span>
+                <h2>Receba novas receitas</h2>
+                <p>Cadastre seu e-mail e receba semanalmente uma nova receita testada e aprovada por João Gabriel.</p>
+                <form id="form-newsletter" class="form-newsletter" novalidate>
+                    <input type="email" id="email-newsletter" placeholder="seu@email.com" required aria-label="Seu e-mail">
+                    <button type="submit">Inscrever-se</button>
+                </form>
+                <p class="newsletter-aviso">Sem spam, prometido. Você pode cancelar a qualquer momento.</p>
+            </div>
+        </section>
+
+        <!-- Receitas relacionadas -->
+        <section class="relacionadas animar-ao-rolar">
+            <h2>Você também vai gostar</h2>
+            <div class="grid-relacionadas">
+                <article class="relacionada-card">
+                    <div class="relacionada-imagem" style="background-image: url('imagens/relacionada-fuba.jpg');"></div>
+                    <div class="relacionada-conteudo">
+                        <span class="relacionada-tag">Bolos</span>
+                        <h3>Bolo de Fubá Cremoso</h3>
+                        <p>Aquele bolo de fubá com camada cremosa que faz a sua avó ficar orgulhosa.</p>
+                        <span class="relacionada-tempo">⏱️ 50 min</span>
+                    </div>
+                </article>
+                <article class="relacionada-card">
+                    <div class="relacionada-imagem" style="background-image: url('imagens/relacionada-brigadeiro.jpg');"></div>
+                    <div class="relacionada-conteudo">
+                        <span class="relacionada-tag">Doces</span>
+                        <h3>Brigadeiro Gourmet</h3>
+                        <p>O brigadeiro perfeito para acompanhar — cremoso por dentro, brilhante por fora.</p>
+                        <span class="relacionada-tempo">⏱️ 25 min</span>
+                    </div>
+                </article>
+                <article class="relacionada-card">
+                    <div class="relacionada-imagem" style="background-image: url('imagens/relacionada-chocolate.jpg');"></div>
+                    <div class="relacionada-conteudo">
+                        <span class="relacionada-tag">Bolos</span>
+                        <h3>Bolo de Chocolate Molhadinho</h3>
+                        <p>O bolo de chocolate mais fofinho e molhadinho que você vai provar na vida.</p>
+                        <span class="relacionada-tempo">⏱️ 55 min</span>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Dica final + botões -->
+        <section class="dica-final animar-ao-rolar">
+            <div class="dica-final-conteudo">
+                <span class="dica-final-tag">👨‍🍳 Dica do chef</span>
+                <h2>O segredo do bolo perfeito</h2>
+                <p>
+                    Para uma cobertura ainda mais brilhante, retire a panela do fogo assim que a calda
+                    cobrir as costas de uma colher. Espere o bolo amornar antes de despejar — assim a calda
+                    penetra um pouquinho na superfície e cria uma camada irresistível.
+                </p>
+                <div class="acoes-finais">
+                    <button id="botao-apetite" class="botao-apetite" type="button">
+                        🍴 Estou pronto para comer!
+                    </button>
+                    <button id="botao-imprimir" class="botao-secundario" type="button">
+                        🖨️ Imprimir receita
+                    </button>
+                    <button id="botao-compartilhar" class="botao-secundario" type="button">
+                        🔗 Compartilhar
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sobre o autor -->
+        <section class="sobre-autor animar-ao-rolar" id="autor">
+            <div class="autor-cartao">
+                <div class="autor-avatar" aria-hidden="true">JG</div>
+                <div class="autor-info">
+                    <span class="autor-tag">✍️ Sobre o autor</span>
+                    <h2>João Gabriel</h2>
+                    <p class="autor-titulo">Estudante & desenvolvedor web em formação</p>
+                    <p class="autor-bio">
+                        Este projeto foi desenvolvido com muito carinho como parte do
+                        <strong>Desafio de Recuperação — Web Receita</strong>, aplicando
+                        conceitos fundamentais de <strong>HTML5</strong>, <strong>CSS3</strong>
+                        e um toque de <strong>JavaScript</strong> para tornar a página interativa.
+                    </p>
+                    <div class="autor-skills">
+                        <span class="skill-tag">HTML5</span>
+                        <span class="skill-tag">CSS3</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">Design Responsivo</span>
+                        <span class="skill-tag">UX</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="rodape">
+        <div class="rodape-conteudo">
+            <div class="rodape-coluna">
+                <h3>🥕 Bolo de Cenoura</h3>
+                <p>A melhor receita tradicional, feita com carinho por João Gabriel.</p>
+            </div>
+            <div class="rodape-coluna">
+                <h3>Navegação</h3>
+                <ul>
+                    <li><a href="#ingredientes">Ingredientes</a></li>
+                    <li><a href="#preparo">Modo de preparo</a></li>
+                    <li><a href="#galeria">Galeria</a></li>
+                    <li><a href="#dicas">Dicas</a></li>
+                    <li><a href="#depoimentos">Avaliações</a></li>
+                    <li><a href="#autor">Sobre o autor</a></li>
+                </ul>
+            </div>
+            <div class="rodape-coluna">
+                <h3>Compartilhe</h3>
+                <p>Marque seus amigos e espalhe a receita!</p>
+                <div class="rodape-social">
+                    <span title="WhatsApp">📱</span>
+                    <span title="Mensagem">💬</span>
+                    <span title="E-mail">📧</span>
+                </div>
+            </div>
+        </div>
+        <div class="rodape-base">
+            <p>&copy; 2026 — Desenvolvido com 🧡 por <strong>João Gabriel</strong>.</p>
+            <p class="rodape-pequeno">Desafio de Projeto Web · HTML5 &amp; CSS3 &amp; JavaScript</p>
+        </div>
+    </footer>
+
+    <!-- Botão voltar ao topo -->
+    <button id="botao-topo" class="botao-topo" type="button" aria-label="Voltar ao topo">↑</button>
+
+    <!-- Lightbox da galeria -->
+    <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Visualizador de imagem">
+        <button class="lightbox-fechar" id="lightbox-fechar" type="button" aria-label="Fechar">×</button>
+        <img id="lightbox-imagem" src="" alt="">
+    </div>
+
+    <!-- Notificação toast -->
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
