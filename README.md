@@ -5,11 +5,21 @@
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5">
-  <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3">
-  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript">
-  <img src="https://img.shields.io/badge/Responsivo-✓-success?style=for-the-badge" alt="Responsivo">
-  <img src="https://img.shields.io/badge/Acessível-WCAG-blue?style=for-the-badge" alt="Acessível">
+  <a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML" target="_blank" rel="noopener noreferrer">
+    <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5">
+  </a>
+  <a href="https://developer.mozilla.org/pt-BR/docs/Web/CSS" target="_blank" rel="noopener noreferrer">
+    <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3">
+  </a>
+  <a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript" target="_blank" rel="noopener noreferrer">
+    <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript">
+  </a>
+  <a href="https://developer.mozilla.org/pt-BR/docs/Learn/CSS/CSS_layout/Responsive_Design" target="_blank" rel="noopener noreferrer">
+    <img src="https://img.shields.io/badge/Responsivo-✓-success?style=for-the-badge" alt="Responsivo">
+  </a>
+  <a href="https://www.w3.org/WAI/standards-guidelines/wcag/" target="_blank" rel="noopener noreferrer">
+    <img src="https://img.shields.io/badge/Acessível-WCAG-blue?style=for-the-badge" alt="Acessível">
+  </a>
 </p>
 
 <p align="center">
@@ -27,15 +37,13 @@
 
 Este projeto foi desenvolvido como parte do **Desafio de Recuperação — Web Receita**, com o objetivo de criar uma página web atrativa e bem estruturada para exibir a receita do clássico **Bolo de Cenoura com Cobertura de Chocolate**.
 
-A página vai além do desafio original, aplicando boas práticas modernas de desenvolvimento front-end: **semântica HTML5**, **CSS3 avançado** com variáveis e animações, **JavaScript interativo**, **design responsivo**, **acessibilidade**, **modo escuro** e muito mais.
+A página vai além do desafio original, aplicando boas práticas modernas de desenvolvimento front-end: **semântica HTML5**, **CSS3 avançado** com variáveis e animações, **JavaScript interativo**, design responsivo e acessibilidade.
 
 ---
 
 ## 🌐 Demonstração
 
-🔗 **Acesse online:** [https://jaog1v1.github.io/Site-O-Melhor-Bolo-de-Cenoura/)
-
-> ⚠️ Substitua `SEU-USUARIO` pelo seu nome de usuário do GitHub depois de publicar.
+🔗 **Acesse online:** [https://jaog1v1.github.io/Site-O-Melhor-Bolo-de-Cenoura/](https://jaog1v1.github.io/Site-O-Melhor-Bolo-de-Cenoura/)
 
 ---
 
